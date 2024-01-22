@@ -178,7 +178,7 @@ package STM32.Board is
    LCD_Natural_Width  : constant := 240;
    LCD_Natural_Height : constant := 320;
 
-   Display     : Framebuffer_ILI9341.Frame_Buffer;
+   Display     : aliased Framebuffer_ILI9341.Frame_Buffer;
    Touch_Panel : Touch_Panel_STMPE811.Touch_Panel;
 
    ----------------------
