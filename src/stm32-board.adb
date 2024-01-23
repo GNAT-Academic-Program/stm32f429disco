@@ -200,4 +200,7 @@ package body STM32.Board is
       User_Button_Point.Configure_IO ((Mode_In, Resistors => Floating));
    end Configure_User_Button_GPIO;
 
+begin
+   Set_High_Speed_External_Clock (8000000);
+   -- Initialize_SDRAM;
 end STM32.Board;
