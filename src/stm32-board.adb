@@ -41,8 +41,10 @@
 --   COPYRIGHT(c) 2014 STMicroelectronics                                   --
 ------------------------------------------------------------------------------
 
-with Ada.Real_Time; use Ada.Real_Time;
 with HAL.SPI;
+with STM32.SDRAM; use STM32.SDRAM;
+
+with Ada.Real_Time; use Ada.Real_Time;
 
 package body STM32.Board is
 
@@ -79,6 +81,44 @@ package body STM32.Board is
           Speed       => Speed_100MHz,
           Resistors   => Floating));
    end Initialize_LEDs;
+
+      ---------------------------
+   -- Initialize_SDRAM_GPIO --
+   ---------------------------
+
+   procedure Initialize_SDRAM_GPIO is
+   begin
+      Enable_Clock (SDRAM_PINS);
+
+      Configure_IO (SDRAM_Pins,
+                    (Mode           => Mode_AF,
+                     AF             => GPIO_AF_FMC_12,
+                     AF_Speed       => Speed_50MHz,
+                     AF_Output_Type => Push_Pull,
+                     Resistors      => Pull_Up));
+
+      Lock (SDRAM_Pins);
+   end;
+
+   ----------------------
+   -- Initialize_SDRAM --
+   ----------------------
+   procedure Initialize_SDRAM is
+   begin
+      Initialize_SDRAM_GPIO;
+      STM32.SDRAM.Initialize (STM32.Device.System_Clock_Frequencies.SYSCLK,
+                              SDRAM_Base,
+                              SDRAM_Bank,
+                              SDRAM_CAS_Latency,
+                              SDRAM_Refresh_Cnt,
+                              SDRAM_Min_Delay_In_ns,
+                              SDRAM_Row_Bits,
+                              SDRAM_Mem_Width,
+                              SDRAM_CLOCK_Period,
+                              SDRAM_Read_Burst,
+                              SDRAM_Read_Pipe);
+   end;
+
 
    ----------------------
    -- Setup_I2C_Master --
@@ -201,6 +241,5 @@ package body STM32.Board is
    end Configure_User_Button_GPIO;
 
 begin
-   Set_High_Speed_External_Clock (8000000);
-   -- Initialize_SDRAM;
+   Initialize_SDRAM;
 end STM32.Board;

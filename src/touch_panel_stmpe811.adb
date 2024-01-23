@@ -44,7 +44,7 @@
 with STM32.Board;          use STM32;
 with STM32.I2C;            use STM32.I2C;
 with STM32.GPIO;           use STM32.GPIO;
---  with STM32.Setup;
+-- with STM32.Setup;
 
 with STM32.Device;         use STM32.Device;
 
@@ -70,12 +70,6 @@ package body Touch_Panel_STMPE811 is
       Status : Boolean;
    begin
       if not TP_I2C.Port_Enabled then
-         --  STM32.Setup.Setup_I2C_Master (Port        => TP_I2C,
-         --                                SDA         => SDA,
-         --                                SCL         => SCL,
-         --                                SDA_AF      => SCL_SDA_AF,
-         --                                SCL_AF      => SCL_SDA_AF,
-         --                                Clock_Speed => 100_000);
          STM32.Board.Setup_I2C_Master (Port        => TP_I2C,
                                        SDA         => SDA,
                                        SCL         => SCL,

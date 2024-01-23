@@ -46,9 +46,9 @@
 with STM32.Device;  use STM32.Device;
 
 with STM32.GPIO;    use STM32.GPIO;
+with STM32.I2C;     use STM32.I2C;
 with STM32.SPI;     use STM32.SPI;
 with STM32.FMC;     use STM32.FMC;
-with STM32.I2C;     use STM32.I2C;
 
 with L3GD20;
 with Framebuffer_ILI9341;
@@ -135,6 +135,14 @@ package STM32.Board is
    SDRAM_Refresh_Cnt     : constant := 1386;
    SDRAM_Min_Delay_In_ns : constant := 70;
 
+   procedure Initialize_SDRAM_GPIO;
+   procedure Initialize_SDRAM;
+
+   procedure Setup_I2C_Master (Port           : in out I2C_Port'Class;
+                               SDA, SCL       : GPIO_Point;
+                               SDA_AF, SCL_AF : GPIO_Alternate_Function;
+                               Clock_Speed    : UInt32);
+
    ---------------
    -- SPI5 Pins --
    ---------------
@@ -180,15 +188,6 @@ package STM32.Board is
 
    Display     : Framebuffer_ILI9341.Frame_Buffer;
    Touch_Panel : Touch_Panel_STMPE811.Touch_Panel;
-
-   ----------------------
-   -- Setup_I2C_Master --
-   ----------------------
-
-   procedure Setup_I2C_Master (Port           : in out I2C_Port'Class;
-                               SDA, SCL       : GPIO_Point;
-                               SDA_AF, SCL_AF : GPIO_Alternate_Function;
-                               Clock_Speed    : UInt32);
 
    -----------------
    -- User button --
