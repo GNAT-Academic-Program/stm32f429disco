@@ -241,5 +241,6 @@ package body STM32.Board is
    end Configure_User_Button_GPIO;
 
 begin
+   Set_High_Speed_External_Clock (8000000);
    Initialize_SDRAM;
 end STM32.Board;
