@@ -10,9 +10,9 @@ This package is a library. Usually, you create applications building upon this c
 
 ## Prerequisite
 
-- Alire.
+- [Alire](https://github.com/alire-project/alire/releases/tag/v1.2.2)
 
-## [Instructions to Use](https://github.com/GNAT-Academic-Program#install-alire-an-ada-package-manager)
+## --> [Instructions to Use](https://github.com/GNAT-Academic-Program#install-alire-an-ada-package-manager) <--
 
 ## Contributing
 
