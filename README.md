@@ -2,6 +2,8 @@
 
 This repository contains an `STM32F429DISCO` BSP for Alire, streamlining hardware interaction for Ada and C applications on the board.
 
+<img src="https://github.com/GNAT-Academic-Program/stm32f429disco/assets/1427158/9d17c268-1e55-4f71-bb9d-8c2552e4aa2d" width="100">
+
 ![image](https://github.com/GNAT-Academic-Program/stm32f429disco/assets/1427158/9d17c268-1e55-4f71-bb9d-8c2552e4aa2d)
 
 ## Demos
