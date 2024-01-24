@@ -1,6 +1,6 @@
 # STM32F429DISCO Board Support Package (Alire)
 
-This repository provides an STM32F429DISCO Board Support Package for Alire, facilitating the creation of Ada applications on this board. The `stm32f429disco` BSP simplifies hardware interaction and integrates with the Ada projects via the Alire package manager.
+This repository provides an STM32F429DISCO Board Support Package for Alire, facilitating the creation of Ada applications on this board. The `stm32f429disco` BSP simplifies hardware interaction and integrates with Ada projects via the Alire package manager.
 
 ## Demos
 This package is a dependency, a library. Usually, you create applications building upon this crate:
