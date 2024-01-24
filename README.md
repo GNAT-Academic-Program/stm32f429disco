@@ -8,7 +8,7 @@ This package is a dependency, a library. Usually, you create applications buildi
 
 ## Prerequisite (instructions tested on Linux Ubuntu 20.04 only)
 
-- [Alire](https://github.com/alire-project/alire/releases) the Ada package manager.
+- Alire, a package manager for the Ada programming language.
 
 ## [Instructions to Use](https://github.com/GNAT-Academic-Program#install-alire-an-ada-package-manager) ###
 
