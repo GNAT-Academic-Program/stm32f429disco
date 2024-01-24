@@ -7,7 +7,7 @@ This repository contains an `STM32F429DISCO` BSP for Alire, streamlining hardwar
 </center>
 
 <div style="text-align: center;">
-    <img width="200" src="[path_to_your_image.jpg](https://github.com/GNAT-Academic-Program/stm32f429disco/assets/1427158/9d17c268-1e55-4f71-bb9d-8c2552e4aa2d)" alt="stm32f429disco" style="display: block; margin: auto;">
+    <img width="200" src="https://github.com/GNAT-Academic-Program/stm32f429disco/assets/1427158/9d17c268-1e55-4f71-bb9d-8c2552e4aa2d" alt="stm32f429disco" style="display: block; margin: auto;">
 </div>
 
 ## Demos
