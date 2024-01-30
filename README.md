@@ -5,7 +5,7 @@ This repository contains an `STM32F429DISCO` BSP for Alire, streamlining hardwar
 <img width="200px" src="https://github.com/GNAT-Academic-Program/stm32f429disco/assets/1427158/9d17c268-1e55-4f71-bb9d-8c2552e4aa2d">
 
 ## Documentation
-- [Usefull read]()
+- [Board Official Doc](https://github.com/GNAT-Academic-Program/stm32f429disco/blob/main/doc/um1670-discovery-kit-with-stm32f429zi-mcu-stmicroelectronics.pdf)
 
 ## Demos
 This package is a library. Usually, you create applications building upon this crate:
